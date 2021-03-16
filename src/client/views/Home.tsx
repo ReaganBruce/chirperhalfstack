@@ -14,7 +14,7 @@ const Home: React.FC<IHomeProps> = props => {
     useEffect(() => {
         (async () => {
             try {
-                const response = await fetch('http://localhost:3000/api/chirps');
+                const response: Response = await fetch('http://localhost:3000/api/chirps');
                 const getChirps = await response.json();
                 setGetChirps(getChirps);
             } catch (error) {

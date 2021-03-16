@@ -9,7 +9,7 @@ const Add: React.FC<AddProps> = props => {
     const [chirp, setChirp] = useState('');
     const history = useHistory();
     
-    const handleClick = async () => {
+    const handleClick: React.ReactEventHandler = async () => {
 
         history.push('/');
         await fetch('/api/chirps', {
